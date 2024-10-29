@@ -8,12 +8,12 @@ export function Nav() {
     const pathname = usePathname();
 
     return (
-        <nav className="w-full h-12 bg-brownbase flex items-center text-white">
+        <nav className="w-full h-12 bg-navbarColor flex items-center text-white">
             <div className="h-full flex-[3] flex items-center justify-around text-xl">
                 <Link
                     href="/"
                     className={`h-full p-2 flex justify-center items-center ${
-                        pathname === '/' ? 'bg-orange-800' : 'hover:bg-orange-900'
+                        pathname === '/' ? 'bg-textColor' : 'hover:bg-textColor'
                     }`}
                 >
                     Accueil
@@ -21,7 +21,7 @@ export function Nav() {
                 <Link
                     href="/products"
                     className={`h-full p-2 flex justify-center items-center ${
-                        pathname === '/products' ? 'bg-orange-800' : 'hover:bg-orange-900'
+                        pathname === '/products' ? 'bg-titleColor' : 'hover:bg-textColor'
                     }`}
                 >
                     Boutique
@@ -29,7 +29,7 @@ export function Nav() {
                 <Link
                     href="/contact"
                     className={`h-full p-2 flex justify-center items-center ${
-                        pathname === '/contact' ? 'bg-orange-800' : 'hover:bg-orange-900'
+                        pathname === '/contact' ? 'bg-iconColor' : 'hover:bg-buttonColor'
                     }`}
                 >
                     Nous contacter
@@ -37,18 +37,22 @@ export function Nav() {
                 <Link
                     href="/administration"
                     className={`h-full p-2 flex justify-center items-center ${
-                        pathname === '/administration' ? 'bg-orange-800' : 'hover:bg-orange-900'
+                        pathname === '/administration' ? 'bg-orange-800' : 'hover:bg-titleColor'
                     }`}
                 >
                     Dashboard
                 </Link>
             </div>
-            <div className="flex-[1] flex items-center justify-center">
-                <Image src="/logos/logo-W2C.png" alt="Logo" width={80} height={80} className="bg-brownbase absolute top-0 rounded-bl-3xl rounded-br-3xl hover:scale-105 z-10" />
-            </div>
-            <div className="flex-[3] flex items-center justify-end">
-                <FaShoppingCart size={40} className="mr-8 p-1  hover:bg-orange-900" />
-                <FaUser size={40} className="mr-8 p-1"/>
+                <div className="flex-[1] flex items-center justify-center">
+                    <Link href={"/"} className={"absolute top-0 z-10"}>
+                    <Image src="/logos/logo-W2C.png" alt="Logo" width={80} height={80}
+                           className="bg-buttonColor  rounded-full hover:cursor-pointer  opacity-100"/>
+                    </Link>
+                </div>
+
+            <div className="flex-[3] flex items-center justify-end h-full">
+                <FaShoppingCart size={50} className="h-full mr-8 p-1 pl-2 pr-2  hover:bg-textColor"/>
+                <FaUser size={50} className="h-full mr-8 p-1 pl-2 pr-2 hover:bg-textColor"/>
             </div>
 
         </nav>
