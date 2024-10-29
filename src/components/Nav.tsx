@@ -12,7 +12,7 @@ export function Nav() {
             <div className="h-full flex-[3] flex items-center justify-around text-xl">
                 <Link
                     href="/"
-                    className={`h-full p-2 flex justify-center items-center ${
+                    className={`h-full w-1/4 p-2 flex justify-center items-center ${
                         pathname === '/' ? 'bg-textColor' : 'hover:bg-textColor'
                     }`}
                 >
@@ -20,7 +20,7 @@ export function Nav() {
                 </Link>
                 <Link
                     href="/products"
-                    className={`h-full p-2 flex justify-center items-center ${
+                    className={`h-full w-1/4 p-2 flex justify-center items-center ${
                         pathname === '/products' ? 'bg-titleColor' : 'hover:bg-textColor'
                     }`}
                 >
@@ -28,15 +28,15 @@ export function Nav() {
                 </Link>
                 <Link
                     href="/contact"
-                    className={`h-full p-2 flex justify-center items-center ${
+                    className={`h-full w-1/4 p-2 flex justify-center items-center ${
                         pathname === '/contact' ? 'bg-iconColor' : 'hover:bg-buttonColor'
                     }`}
                 >
-                    Nous contacter
+                    Contact
                 </Link>
                 <Link
                     href="/administration"
-                    className={`h-full p-2 flex justify-center items-center ${
+                    className={`h-full w-1/4 p-2 flex justify-center items-center ${
                         pathname === '/administration' ? 'bg-orange-800' : 'hover:bg-titleColor'
                     }`}
                 >
