@@ -1,0 +1,57 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+
+model Product {
+  id            Int      @id @default(autoincrement())
+  name          String
+  filePath      String
+  imagePath     String
+  description   String
+  price         Float
+  disponibility Boolean
+  orders   OrderProduct[]  // Relation avec la table de jointure
+  downloadVerification DownloadVerification[]
+  //ingrédients a rajouter 
+  // poids peut etre aussi
+  // allergéne peut etre ?
+
+  }
+
+model User {
+  id                Int      @id @default(autoincrement())
+  username          String   @unique
+  email             String   @unique
+  password          String
+  orders Order[]
+}
+
+model Order {
+  id         Int      @id @default(autoincrement())
+  totalPrice Float
+  status     String
+  userId     Int
+
+  user       User            @relation(fields: [userId], references: [id])
+  products   OrderProduct[]  // Relation avec la table de jointure
+}
+
+// Table de jointure pour gérer la relation plusieurs-à-plusieurs entre Order et Product
+model OrderProduct {
+  orderId   Int
+  productId Int
+
+  order     Order    @relation(fields: [orderId], references: [id], onDelete: Restrict)
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Restrict)
+
+  @@id([orderId, productId]) // Clé primaire composite pour garantir l'unicité
+}
