@@ -68,7 +68,7 @@ export function Nav() {
                 </Link>
                 <Link
                     href="/contact"
-                    className={`h-full w-1/4 p-2 flex justify-center items-center ${
+                    className={`h-full w-1/4 p-2 flex justify-center items-center text-buttonColor ${
                         pathname === '/contact' ? 'bg-iconColor' : 'hover:bg-buttonColor hover:text-textColor'
                     }`}
                 >
