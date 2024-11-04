@@ -25,7 +25,7 @@ export default function RootLayout({
                 <Nav />
             </header>
             <main
-                className="flex-grow w-full ')] bg-cover bg-center bg-no-repeat opacity-90">
+                className="flex-grow w-full pt-10 pb-10 bg-lightBrown2Color text-textColor">
                 {children}
             </main>
 
