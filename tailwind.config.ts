@@ -22,11 +22,9 @@ const config = {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
       colors: {
-        brownbase : "hsl(var(--brownbase))",
         navbarColor: "hsl(var(--navbar-color))",
-        lightBrownColor: "hsla(var(--background-light-brown-color))",
-        lightBrown1Color: "hsla(var(--background-light-brown-color1))",
-        lightBrown2Color: "hsla(var(--background-light-brown-color2))",
+        lightBrownColor: "hsla(var(--background-light-brown))",
+        backgroundBrownColor: "hsla(var(--background-light-brown))",
         titleColor: "hsl(var(--title-color))",
         textColor: "hsl(var(--text-color))",
         buttonColor: "hsl(var(--button-color))",

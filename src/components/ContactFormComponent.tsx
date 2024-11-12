@@ -8,11 +8,10 @@ export type FormData = {
     firstname: string;
     lastname: string;
     email: string;
-    phoneNumber: string;
     message: string;
 };
 
-const  ContactFormComponent : FC = () => {
+const ContactFormComponent: FC = () => {
     const { register, handleSubmit } = useForm<FormData>();
 
     function onSubmit(data: FormData) {
@@ -20,48 +19,42 @@ const  ContactFormComponent : FC = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-
-            <div className=''>
-                <div>
-                    <label htmlFor='firstname' className=''>
-                        Prénom
-                    </label>
-                    <input type='text' placeholder='Prénom' className=''
-                        {...register('firstname', {required: true})}
+        <form onSubmit={handleSubmit(onSubmit)} className="w-[80vw] h-[80vh] md:w-[50vw] lg:w-[40vw] mx-auto bg-navbarColor flex flex-col justify-between p-8 space-y-6 rounded-md shadow-md text-white">
+            {/* Section Prénom et Nom */}
+            <div className="flex w-full gap-x-4">
+                <div className="flex flex-col w-1/2">
+                    <label htmlFor="firstname" className="mb-1 font-bold">Prénom</label>
+                    <input type="text" placeholder="Prénom" className="p-2 border rounded-md placeholder:text-textColor text-textColor"
+                           {...register('firstname', { required: true })}
                     />
                 </div>
-                <div>
-                    <label htmlFor='lastname' className=''>
-                        Nom
-                    </label>
-                    <input type='text' placeholder='Nom' className=''
-                        {...register('lastname', {required: true})}
+                <div className="flex flex-col w-1/2">
+                    <label htmlFor="lastname" className="mb-1 font-bold">Nom</label>
+                    <input type="text" placeholder="Nom" className="p-2 border rounded-md placeholder:text-textColor text-textColor"
+                           {...register('lastname', { required: true })}
                     />
                 </div>
             </div>
 
-            <div className='mb-5'>
-                <label htmlFor='email' className=''>
-                    Adresse email
-                </label>
-                <input type='email' placeholder='example@domain.com' className=''
-                    {...register('email', { required: true })}
+            {/* Section Email */}
+            <div className="flex flex-col w-full">
+                <label htmlFor="email" className="mb-1 font-bold">Adresse email</label>
+                <input type="email" placeholder="example@domain.com" className="p-2 border rounded-md placeholder:text-textColor text-textColor"
+                       {...register('email', { required: true })}
                 />
             </div>
 
-            <div className='mb-5'>
-                <label htmlFor='message' className=''>
-                    Message
-                </label>
-                <textarea rows={4} placeholder='Saisir votre message'
-                    className=''
-                    {...register('message', { required: true })}
+            {/* Section Message */}
+            <div className="flex flex-col w-full">
+                <label htmlFor="message" className="mb-1 font-bold">Message</label>
+                <textarea rows={4} placeholder="Saisir votre message" className="p-2 border rounded-md placeholder:text-textColor text-textColor"
+                          {...register('message', { required: true })}
                 ></textarea>
             </div>
 
-            <div>
-                <button className='hover:shadow-form rounded-md bg-textColor py-3 px-8 text-base font-semibold text-white outline-none'>
+            {/* Bouton d'envoi */}
+            <div className="flex justify-center">
+                <button className="px-6 py-2 bg-buttonColor text-white font-semibold rounded-md shadow hover:cursor-pointer hover:text-textColor transition">
                     Submit
                 </button>
             </div>

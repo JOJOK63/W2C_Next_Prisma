@@ -26,9 +26,9 @@ export function Nav() {
         <nav className="w-full h-12 bg-navbarColor flex items-center text-white ">
             <div className="lg:hidden ml-5" onClick={toggleMenu}>
                 {isOpen ? (
-                    <FaTimes size={30} className="cursor-pointer hover:bg-textColor"/>
+                    <FaTimes size={30} className="cursor-pointer hover:text-buttonColor"/>
                 ) : (
-                    <FaBars size={30} className="cursor-pointer hover:bg-textColor"/>
+                    <FaBars size={30} className="cursor-pointer hover:text-buttonColor"/>
                 )}
             </div>
             {isOpen && (
@@ -90,22 +90,36 @@ export function Nav() {
                         alt="Logo"
                         width={80}
                         height={80}
-                        className="bg-buttonColor rounded-full hover:cursor-pointer hover:bg-iconColor hover:border-2 border-buttonColor w-12 h-12 lg:w-20 lg:h-20 "
+                        className="bg-buttonColor rounded-full hover:cursor-pointer hover:bg-textColor w-12 h-12 lg:w-20 lg:h-20"
                     />
                 </Link>
             </div>
 
             <div className="flex-[3] flex items-center justify-end h-full">
-                <FaShoppingCart
+                <Link
+                    href="/cart"
                     onClick={() => isOpen && toggleMenu()}
-                    size={38} // Taille par défaut pour mobile
-                    className="h-full mr-2 p-1 pl-2 pr-2 hover:cursor-pointer lg:size-[2.2rem] lg:mr-8 lg:p-0.5 hover:text-buttonColor"
-                />
-                <FaUser
+                    className={`flex items-center justify-center h-full  mr-2 p-1 pl-2 pr-2 ${pathname === '/cart' ? 'bg-textColor' : 'hover:bg-textColor'}`}
+                >
+                    <FaShoppingCart
+                        size={38} // Taille par défaut pour mobile
+                        className="hover:cursor-pointer lg:size-[2.2rem] hover:text-buttonColor "
+                    />
+                </Link>
+
+                <Link
+                    href="/user"
                     onClick={() => isOpen && toggleMenu()}
-                    size={36} // Taille par défaut pour mobile
-                    className="h-full mr-2 p-1 pl-2 pr-2 hover: cursor-pointer lg:size-[2.2rem] lg:mr-8 lg:p-0.5   hover:text-buttonColor"
-                />
+                    className={`flex items-center justify-center h-full  mr-2 p-1 pl-2 pr-2 ${pathname === '/user' ? 'bg-textColor' : 'hover:bg-textColor'}`}
+                >
+                    <FaUser
+                        size={36} // Taille par défaut pour mobile
+                        className="hover:cursor-pointer lg:size-[2.2rem] hover:text-buttonColor"
+                    />
+                </Link>
+
+                {/*h-full mr-2 p-1 pl-2 pr-2*/}
+
             </div>
 
         </nav>
