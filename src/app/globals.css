@@ -6,7 +6,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  box-shadow: 0 0 2px red inset;
+  /*box-shadow: 0 0 2px red inset;*/
 }
 html, body {
   margin: 0;
@@ -19,7 +19,7 @@ html, body {
     --navbar-color: 27, 61%, 36%;
     --background-light-brown: 34, 87%, 60%, 0.2;
     --background-brown-color: 21, 41%, 42%, 0.9;
-    --title-color: 33, 100%, 21%;
+    --title-color: 33, 90%, 48%;
     --text-color: 32, 66%, 45%;
     --button-color: 23, 64%, 24%;
     --icon-color: 27, 61%, 36%;
