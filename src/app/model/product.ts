@@ -3,10 +3,10 @@ export interface Product {
     name: string;
     description: string;
     price: number;
-    illustration: string;
+    image: string;
+    weight: number;
     category: string;
     disponibility: string;
     ingredients: string;
-    weight: number;
   }
 

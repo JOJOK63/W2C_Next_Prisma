@@ -3,6 +3,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import {Inter} from "next/font/google";
 import {Nav} from "@/components/Nav";
+import QueryProvider from "@/db/QueryClient";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,7 +27,7 @@ export default function RootLayout({
             </header>
             <main
                 className="flex-grow w-full pt-10 pb-10 bg-lightBrownColor text-textColor">
-                {children}
+                <QueryProvider>{children}</QueryProvider>
             </main>
 
             <footer className="w-full text-center bg-navbarColor text-white text-xs p-1">
