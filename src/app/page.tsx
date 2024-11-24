@@ -6,9 +6,6 @@ import Link from "next/link";
 
 export default function Home() {
 
-    function test(){
-        alert("Hello World!");
-    }
     return(
       <>
           <section className="pb-10">
