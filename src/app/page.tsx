@@ -72,7 +72,7 @@ export default function Home() {
           </section>
 
           <section className="pt-10 pb-10">
-              <div>
+              <div className="w-[90%] m-auto">
                   <div className="text-center mb-6">
                       <FaTruck className="m-auto mb-2"size={60}/>
                       <p>
