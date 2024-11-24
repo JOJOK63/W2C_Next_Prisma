@@ -32,37 +32,72 @@ const AddFormProduct: FC = () =>{
                     <div className="flex flex-col w-full">
                         <label htmlFor="name" className="mb-1 font-bold">Nom</label>
                         <input placeholder="Saisir le nom"
-                                  className="p-2 border rounded-md placeholder:text-textColor text-textColor"
-                                  {...register('name', {required: true})}
+                               className="p-2 border rounded-md placeholder:text-textColor text-textColor"
+                               {...register('name', {required: true})}
                         ></input>
                     </div>
 
                     {/* section price */}
                     <div className="flex flex-col w-full">
                         <label htmlFor="price" className="mb-1 font-bold">Prix</label>
-                        <input placeholder="Saisir le prix"
-                               className="p-2 border rounded-md placeholder:text-textColor text-textColor"
-                               {...register('price', {required: true})}
-                        ></input>
+                        <div className="relative">
+                            <input
+                                placeholder="Saisir le prix"
+                                className="p-2 border rounded-md pr-12 placeholder:text-textColor text-textColor w-full"
+                                {...register('price', {required: true})}
+                            />
+                            <span className="absolute inset-y-0 right-2 flex items-center text-textColor">€</span>
+                        </div>
                     </div>
+
 
                     {/* section description */}
                     <div className="flex flex-col w-full">
                         <label htmlFor="description" className="mb-1 font-bold">Description</label>
                         <textarea rows={4} placeholder="Saisir la description"
-                               className="p-2 border rounded-md placeholder:text-textColor text-textColor"
-                               {...register('description', {required: true})}
+                                  className="p-2 border rounded-md placeholder:text-textColor text-textColor"
+                                  {...register('description', {required: true})}
                         ></textarea>
                     </div>
 
                     {/* section availability */}
                     <div className="flex flex-col w-full">
                         <label htmlFor="availability" className="mb-1 font-bold">Disponible</label>
-                        <input
-                               className="p-2 border rounded-md placeholder:text-textColor text-textColor"
-                               {...register('availability', {required: true})}
-                        ></input>
+                        <div className="flex flex-row justify-around space-x-4">
+                            <label className="flex items-center space-x-2">
+                                <input
+                                    type="radio"
+                                    value="yes"
+                                    {...register('availability', {required: true})}
+                                    className="text-textColor"
+                                />
+                                <span>Oui</span>
+                            </label>
+                            <label className="flex items-center space-x-2">
+                                <input
+                                    type="radio"
+                                    value="no"
+                                    {...register('availability', {required: true})}
+                                    className="text-textColor"
+                                />
+                                <span>Non</span>
+                            </label>
+                        </div>
                     </div>
+
+                    {/* section poids */}
+                    <div className="flex flex-col w-full">
+                        <label htmlFor="weight" className="mb-1 font-bold">Poids</label>
+                        <div className="relative">
+                            <input
+                                placeholder="Saisir le poids"
+                                className="p-2 border rounded-md pr-12 placeholder:text-textColor text-textColor w-full"
+                                {...register('weight', {required: true})}
+                            />
+                            <span className="absolute inset-y-0 right-2 flex items-center text-textColor">g</span>
+                        </div>
+                    </div>
+
 
                 </div>
 
