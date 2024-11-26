@@ -4,9 +4,6 @@ export default function Products(){
         <>
             <h1>Nos produits</h1>
 
-            <div className="mt-6 w-full flex items-center justify-center flex-col ">
-                <AddFormProduct></AddFormProduct>
-            </div>
         </>
     )
 }
