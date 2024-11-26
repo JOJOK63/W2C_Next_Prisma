@@ -20,10 +20,13 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
+        <head>
+            <link rel="icon" href="/favicon.ico"/>
+        </head>
         <body className={cn("bg-background min-h-screen font-sans antialiased", inter.variable)}>
         <div className="flex flex-col min-h-screen">
             <header>
-                <Nav />
+                <Nav/>
             </header>
             <main
                 className="flex-grow w-full pt-10 pb-10 bg-lightBrownColor text-textColor">
