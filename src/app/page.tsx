@@ -3,11 +3,15 @@ import { FaFacebookSquare, FaPhoneSquare, FaInstagramSquare,FaUserFriends,FaTruc
 import { LiaCookieSolid } from "react-icons/lia";
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Home() {
 
     return(
       <>
+          <Head>
+              <link rel="icon" href="/favicon.ico" />
+          </Head>
           <section className="pb-10">
               <div>
                   <Image  src="/products/cookies_fourres.jpg" alt="cookies" width={150} height={150} className="m-auto"/>
