@@ -6,17 +6,20 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  box-shadow: 0 0 2px red inset;
+  /*box-shadow: 0 0 2px red inset;*/
+}
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 @layer base {
   :root {
-    --brownbase: 30, 40%, 30%;
+    background: rgba(152, 97, 62, 0.89);
     --navbar-color: 27, 61%, 36%;
-    --background-light-brown-color: 34, 87%, 60%, 0.1;
-    --background-light-brown-color1: 34, 87%, 60%, 0.069;
-    --background-light-brown-color2: 34, 87%, 60%, 0.2;
-    --title-color: 33, 100%, 21%;
+    --background-light-brown: 34, 87%, 60%, 0.2;
+    --background-brown-color: 21, 41%, 42%, 0.9;
+    --title-color: 33, 90%, 48%;
     --text-color: 32, 66%, 45%;
     --button-color: 23, 64%, 24%;
     --icon-color: 27, 61%, 36%;
@@ -92,7 +95,3 @@
   }
 }
 
-html,body{
-  width: 100%;
-  height: 100%;
-}
