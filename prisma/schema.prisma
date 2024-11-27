@@ -15,11 +15,11 @@ model Product {
   id            Int      @id @default(autoincrement())
   name          String
   price         Float
-  imagePath     String
+  //imagePath     String
   description   String
   //images
   weight Float
-  disponibility Boolean
+  availability Boolean
   createdAt DateTime @default(now())
   //ingredients
   //category
