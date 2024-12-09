@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Produit 1",
+    "description": "Description détaillée du produit 1",
+    "image": "/products/17107.jpg",
+    "price": 20,
+    "weight": 2.2,
+    "availability": true
+  },
+  {
+    "id": 2,
+    "name": "Produit 2",
+    "description": "Description détaillée du produit 2",
+    "image": "/products/17107.jpg",
+    "price": 25,
+    "weight": 2.2,
+    "availability": true
+  },
+  {
+    "id": 3,
+    "name": "Produit 3",
+    "description": "Description détaillée du produit 3",
+    "image": "/products/17107.jpg",
+    "price": 30,
+    "weight": 2.2,
+    "availability": true
+  }
+]
