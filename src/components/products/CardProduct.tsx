@@ -11,9 +11,9 @@ export default function CardProduct({ product }: { product: Product }) {
     }
 
     return (
-        <Link href={`/products/${product.id}`} className="w-full max-w-xs">
-            <Card className="w-ful h-full
-             max-h-96 flex flex-col overflow-hidden
+        <Link href={`/products/${product.id}`} className="w-[300px]">
+            <Card className="w-full h-[350px]
+              flex flex-col overflow-hidden
                             transition-transform duration-300 hover:shadow-lg">
                 <CardHeader className="p-0 relative w-full h-48">
                     <Image

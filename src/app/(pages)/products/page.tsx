@@ -101,8 +101,7 @@ export default function Products() {
             <h1 className="text-center text-3xl font-bold my-6 text-titleColor ">
                 Nos produits
             </h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3
-                            gap-6 place-items-center justify-items-center">
+            <div className="flex gap-8 flex-wrap justify-center bg-red-700 ">
                 {products.map((product) => (
                     <CardProduct key={product.id} product={product} />
                 ))}
