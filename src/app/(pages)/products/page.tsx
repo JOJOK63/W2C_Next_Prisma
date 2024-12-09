@@ -1,7 +1,6 @@
 import React from 'react';
 import CardProduct from "@/components/products/CardProduct";
 import { Product } from "@/app/model/product";
-import AddFormProduct from "@/components/products/AddFormProductComponent";
 
 export default function Products() {
     const products: Product[] = [
@@ -98,7 +97,7 @@ export default function Products() {
     ];
 
     return (
-        <div className="container mx-auto px-4 bg-red-700">
+        <div className="container mx-auto px-4 ">
             <h1 className="text-center text-3xl font-bold my-6 text-titleColor ">
                 Nos produits
             </h1>
@@ -107,9 +106,6 @@ export default function Products() {
                 {products.map((product) => (
                     <CardProduct key={product.id} product={product} />
                 ))}
-            </div>
-            <div>
-                <AddFormProduct></AddFormProduct>
             </div>
         </div>
     );
