@@ -35,6 +35,7 @@ export async function GET() {
         console.log(productsWithImages);
         return NextResponse.json(productsWithImages);
     }catch (error){
+        console.log(error);
         return NextResponse.json({error: " Erreur lors de la récupération des produits"},
             {status:500}
         )
