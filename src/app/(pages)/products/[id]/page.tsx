@@ -6,7 +6,7 @@ async function getProductById(id: string) {
             id: 1,
             name: "Produit 1",
             description: "Description détaillée du produit 1",
-            image: "/products/17107.jpg",
+            image: "/products/cookies-1.jpg",
             price: 20,
             weight : 2.2,
             availability : "true"

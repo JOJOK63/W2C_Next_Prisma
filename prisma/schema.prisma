@@ -6,7 +6,7 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "mysql"
   url      = env("DATABASE_URL")
 }
 
@@ -21,19 +21,22 @@ model Product {
   weight Float
   availability Boolean
   createdAt DateTime @default(now())
+  //image String
   //ingredients
   //category
   // orders   OrderProduct[]  // Relation avec la table de jointure
   // allergéne peut etre ?
   }
 
-// model User {
-//   id                Int      @id @default(autoincrement())
-//   username          String   @unique
-//   email             String   @unique
-//   password          String
-//   orders Order[]
-// }
+model User {
+  id                Int      @id @default(autoincrement())
+  username          String   @unique
+  email             String   @unique
+  password          String
+  isAdmin           Boolean
+//  orders Order[]
+}
+
 //
 // model Order {
 //   id         Int      @id @default(autoincrement())

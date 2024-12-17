@@ -29,7 +29,7 @@ export default function RootLayout({
                 <Nav/>
             </header>
             <main
-                className="flex-grow w-full pt-10 pb-10 bg-lightBrownColor text-textColor">
+                className="flex-grow w-full pt-10 pb-10 text-textColor">
                 <QueryProvider>{children}</QueryProvider>
             </main>
 
